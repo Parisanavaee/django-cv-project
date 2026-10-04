@@ -713,7 +713,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form">
-                        <form class="form" id="contact-form" method="post" action="contact.php">
+                        <form class="form" id="contact-form" method="post">
+                            {% csrf_token %} 
                             <div class="messages"></div>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -730,7 +731,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input id="form_number" class="form-control" type="text" name="number"
+                                        <input id="form_number" class="form-control" type="text" name="phone"
                                             placeholder="Phone" required>
                                     </div>
                                 </div>
